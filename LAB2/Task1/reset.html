@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reset Password</title>
+    <link rel="stylesheet" href="style.css"> </head>
+<body>
+    <main>
+        <div class="row">
+            <div class="col-form">
+                <div class="form-container">
+                    <h2>Find Your Account</h2>
+                    <p>Enter your email and your new password.</p>
+                    <form action="save.php" method="POST">
+                        <input type="text" name="account" required placeholder="Email address">
+                        <input type="password" name="password" required placeholder="New Password">
+                        
+                        <button type="submit" name="action" value="reset" class="btn-login">Change Password</button>
+                        <a href="index.html">Cancel</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
