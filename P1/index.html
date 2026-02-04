@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Greeting page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form class="greetingForm" id="myForm">
+        <div class="input-group">
+            <label>Name:</label>
+            <input class="greetingField" id="nameInput" type="text" placeholder="Enter name">
+        </div>
+
+        <div class="input-group">
+            <label>Age:</label>
+            <input class="greetingField" id="ageInput" type="text" placeholder="Enter age">
+        </div>
+
+        <button type="submit" class="btn">Welcome</button>
+    </form>
+
+    <div id="hiddenDivs">
+        <div id="myDiv">
+            Welcome, user
+        </div>
+        <div id="errorDiv">
+            You are not supposed to be here because you are less than 18 years old.
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

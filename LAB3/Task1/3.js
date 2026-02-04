@@ -1,0 +1,1 @@
+alert("I'm a java script and you can see this");

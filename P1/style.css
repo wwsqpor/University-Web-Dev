@@ -1,0 +1,46 @@
+.greetingForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh; /* Changed from 100vh so it doesn't push the Hide button too far down */
+    gap: 15px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column; /* Keeps label on top of input */
+    width: 250px;
+}
+
+.greetingField {
+    border: 1px solid black;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+#myDiv {
+    background-color: #dafbe1; /* Light green */
+    color: #1a7f37;
+    border: 1px solid rgba(26, 127, 55, 0.2);
+    padding: 16px;
+    border-radius: 6px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+#errorDiv {
+    background-color: #ffebe9; /* Light red */
+    color: #cf222e;
+    border: 1px solid rgba(207, 34, 46, 0.2);
+    padding: 16px;
+    border-radius: 6px;
+    margin-top: 20px;
+}
+
+#hiddenDivs {
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: sans-serif;
+}
