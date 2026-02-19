@@ -1,0 +1,71 @@
+<!-- Header -->
+<header class="header">
+  <div class="header-inner">
+    <div class="logo">
+      <span class="logo-icon">🛍️</span>
+      <span class="logo-text">TechStore <span class="logo-accent">KZ</span></span>
+    </div>
+    <p class="header-tagline">Premium Tech at Your Fingertips</p>
+  </div>
+</header>
+
+<!-- Category Navigation -->
+<nav class="category-nav">
+  <div class="nav-inner">
+    <p class="nav-label">Browse by Category</p>
+    <div class="category-tabs">
+      <button
+        *ngFor="let cat of categories"
+        class="category-btn"
+        [class.active]="isSelected(cat)"
+        (click)="selectCategory(cat)"
+      >
+        <span class="cat-icon">{{ cat.icon }}</span>
+        <span class="cat-name">{{ cat.name }}</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Main Content -->
+<main class="main-content">
+  <div class="container">
+
+    <!-- Welcome Screen -->
+    <div class="welcome-screen" *ngIf="!selectedCategory">
+      <div class="welcome-glow"></div>
+      <div class="welcome-inner">
+        <h1 class="welcome-title">Welcome to TechStore KZ</h1>
+        <p class="welcome-subtitle">
+          Discover the latest smartphones, laptops, headphones, and tablets —
+          all sourced directly from <strong>kaspi.kz</strong>.
+        </p>
+        <div class="welcome-categories">
+          <button
+            *ngFor="let cat of categories"
+            class="welcome-cat-card"
+            (click)="selectCategory(cat)"
+          >
+            <span class="welcome-cat-icon">{{ cat.icon }}</span>
+            <span class="welcome-cat-name">{{ cat.name }}</span>
+            <span class="welcome-cat-desc">{{ cat.description }}</span>
+          </button>
+        </div>
+        <p class="welcome-hint">↑ Select a category above to start browsing</p>
+      </div>
+    </div>
+
+    <!-- Product List -->
+    <app-product-list
+      *ngIf="selectedCategory"
+      [products]="selectedProducts"
+      [categoryName]="selectedCategory!.icon + ' ' + selectedCategory!.name"
+    ></app-product-list>
+
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <p>© 2025 TechStore KZ — Products sourced from <a href="https://kaspi.kz" target="_blank" rel="noopener noreferrer">kaspi.kz</a></p>
+</footer>

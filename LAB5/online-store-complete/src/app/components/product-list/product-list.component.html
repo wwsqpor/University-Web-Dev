@@ -1,0 +1,22 @@
+<section class="product-list-section">
+  <div class="list-header">
+    <h2 class="list-title">{{ categoryName }}</h2>
+    <span class="product-count" *ngIf="displayedProducts.length > 0">
+      {{ displayedProducts.length }} product{{ displayedProducts.length !== 1 ? 's' : '' }}
+    </span>
+  </div>
+
+  <div class="products-grid" *ngIf="displayedProducts.length > 0">
+    <app-product-item
+      *ngFor="let product of displayedProducts; trackBy: trackById"
+      [product]="product"
+      (deleteProduct)="onDeleteProduct($event)"
+    ></app-product-item>
+  </div>
+
+  <div class="empty-state" *ngIf="displayedProducts.length === 0">
+    <div class="empty-icon">🗑️</div>
+    <h3 class="empty-title">No products left</h3>
+    <p class="empty-subtitle">All products in this category have been removed.</p>
+  </div>
+</section>

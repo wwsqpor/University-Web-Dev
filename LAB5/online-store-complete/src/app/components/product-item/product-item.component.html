@@ -1,0 +1,100 @@
+<article class="product-card">
+  <!-- Delete Confirmation Overlay -->
+  <div class="confirm-overlay" *ngIf="showDeleteConfirm">
+    <div class="confirm-dialog">
+      <p class="confirm-text">Remove this product?</p>
+      <div class="confirm-actions">
+        <button class="btn-cancel" (click)="cancelDelete()">Cancel</button>
+        <button class="btn-confirm-delete" (click)="onDelete()">Remove</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product Image Gallery -->
+  <div class="image-container">
+    <img
+      [src]="currentImage"
+      [alt]="product.name"
+      class="product-image"
+      (error)="onImageError()"
+      (click)="openProduct()"
+    />
+    <div class="image-thumbnails" *ngIf="product.images && product.images.length > 1">
+      <button
+        *ngFor="let img of product.images; let i = index"
+        class="thumb-btn"
+        [class.active]="i === activeImageIndex"
+        (click)="selectImage(i)"
+        [attr.aria-label]="'View image ' + (i + 1)"
+      ></button>
+    </div>
+    <div class="rating-badge">
+      <span class="star-icon">★</span>
+      {{ product.rating }}
+    </div>
+  </div>
+
+  <!-- Product Details -->
+  <div class="product-body">
+    <h3 class="product-name" (click)="openProduct()">{{ product.name }}</h3>
+    <p class="product-description">{{ product.description }}</p>
+
+    <!-- Stars -->
+    <div class="stars-row">
+      <span
+        *ngFor="let star of starArray"
+        class="star"
+        [class.filled]="star.filled"
+      >★</span>
+      <span class="rating-num">({{ product.rating }})</span>
+    </div>
+
+    <!-- Price -->
+    <div class="price-row">
+      <span class="price">{{ formattedPrice }}</span>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="actions">
+      <!-- Like Button -->
+      <button class="btn-like" [class.liked]="isLiked" (click)="likeProduct()">
+        <span class="heart">❤</span>
+        <span class="like-count">{{ product.likes }}</span>
+      </button>
+
+      <!-- Share Button -->
+      <div class="share-wrapper">
+        <button class="btn-share" (click)="toggleShareMenu()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
+            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+          </svg>
+          Share
+        </button>
+        <div class="share-menu" *ngIf="showShareMenu">
+          <button class="share-option whatsapp" (click)="shareOnWhatsApp()">
+            <span class="share-icon">💬</span> WhatsApp
+          </button>
+          <button class="share-option telegram" (click)="shareOnTelegram()">
+            <span class="share-icon">✈️</span> Telegram
+          </button>
+        </div>
+      </div>
+
+      <!-- Delete Button -->
+      <button class="btn-delete" (click)="confirmDelete()" aria-label="Delete product">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- View on Kaspi button -->
+    <a [href]="product.link" target="_blank" rel="noopener noreferrer" class="btn-kaspi">
+      View on kaspi.kz
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
+      </svg>
+    </a>
+  </div>
+</article>

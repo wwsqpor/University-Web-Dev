@@ -1,0 +1,18 @@
+<h1>Hello {{ title }}</h1>
+<h2>Your name is {{ user.name }} and your age is {{ user.age }}</h2>
+
+<h1>{{ "The example of uppercase pipe " + title | uppercase }}</h1>
+<h2>{{ "The example of uppercase pipe " + title | uppercase }}</h2>
+<h1>{{ "The example of LOWERCASE PIPE " + title | lowercase }}</h1>
+<h2>{{ "The example of LOWERCASE PIPE " + title | lowercase }}</h2>
+<p>{{ "This is how it goes" | titlecase}}</p>
+<p>{{ user | json }}</p>
+<p>{{ date }}</p>
+<p>{{ date | date }}</p>
+
+<p>{{ "Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+      Perferendis officia dicta officiis dolor dolore vel autem enim soluta dolorum rerum, 
+      accusantium doloremque nesciunt repellendus voluptatum hic necessitatibus facere voluptas id." | cutText}}</p>
+
+<p>{{ usersAge | sortData}}</p>
+<button [style.color]="color" (click)="changeColor('yellow')">Hello Button</button>
