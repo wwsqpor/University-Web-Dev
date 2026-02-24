@@ -242,7 +242,7 @@
   font-family: var(--font-display);
   font-size: 1rem;
   font-weight: 700;
-  color: var(--text-primary);
+  color: #eef0f8;
 }
 
 .welcome-cat-desc {
@@ -250,6 +250,7 @@
   font-size: 0.78rem;
   color: var(--text-secondary);
   line-height: 1.4;
+  color: #eef0f8;
 }
 
 .welcome-hint {
