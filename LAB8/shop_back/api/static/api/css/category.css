@@ -1,0 +1,58 @@
+/* General Page Setup */
+body {
+    background-color: #f8f9fa;
+    margin: 0;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures the body takes full height */
+}
+
+/* Header stays at the top */
+.category-header {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #0984e3, #6c5ce7);
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.category-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+}
+
+/* Spacer for your products (Lab 8 content) */
+.content-area {
+    flex: 1; /* This pushes the footer/button to the bottom */
+    padding: 40px;
+    text-align: center;
+}
+
+/* Bottom Navigation Styling */
+.bottom-nav {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: white;
+    border-top: 1px solid #e1e8e7;
+}
+
+.btn-redirect {
+    display: inline-block;
+    padding: 14px 32px;
+    background-color: #2d3436;
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-redirect:hover {
+    background-color: #6c5ce7;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(108, 92, 231, 0.3);
+}
