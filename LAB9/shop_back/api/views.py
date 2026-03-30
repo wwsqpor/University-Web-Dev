@@ -1,32 +1,21 @@
-from django.shortcuts import render
-from .models import Product, Category
-from django.views.generic import DetailView
+from rest_framework import viewsets
+from rest_framework.decorators import action
+from rest_framework.response import Response
+from .models import Category, Product
+from .serializers import CategorySerializer, ProductSerializer
 
-def productsList(request):
-    products = Product.objects.all()
-    categories = Category.objects.all()
-    return render(request, 'api/productsList.html', {'products': products, 'categories': categories})
+class CategoryViewSet(viewsets.ModelViewSet):
+    queryset = Category.objects.all()
+    serializer_class = CategorySerializer
 
-def categoriesList(request):
-    categories = Category.objects.all()
-    return render(request, 'api/categories_list.html', {'categories': categories})
+    # Custom action for /api/categories/<id>/products/
+    @action(detail=True, methods=['get'])
+    def products(self, request, pk=None):
+        category = self.get_object()
+        products = Product.objects.filter(category=category)
+        serializer = ProductSerializer(products, many=True)
+        return Response(serializer.data)
 
-class ProductDetailView(DetailView):
-    model = Product
-    template_name = 'api/product_detail.html'
-    context_object_name = 'product'
-
-class CategoryView(DetailView):
-    model = Category
-    template_name = 'api/category.html'
-    context_object_name = 'category'
-
-class ProductsByCategoryView(DetailView):
-    model = Category
-    template_name = 'api/products_by_category.html'
-    context_object_name = 'category'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['products'] = Product.objects.filter(category=self.object)
-        return context
+class ProductViewSet(viewsets.ModelViewSet):
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer
