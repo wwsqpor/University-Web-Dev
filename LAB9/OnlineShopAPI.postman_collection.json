@@ -1,0 +1,206 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "FreshMint Toothpaste",
+      "price": 4.5,
+      "description": "Daily fluoride protection with cool mint flavor.",
+      "count": 500,
+      "is_active": true,
+      "category": 1
+    },
+    {
+      "id": 2,
+      "name": "Organic Whole Milk",
+      "price": 3.2,
+      "description": "1 Liter of farm-fresh organic whole milk.",
+      "count": 120,
+      "is_active": true,
+      "category": 1
+    },
+    {
+      "id": 3,
+      "name": "SoundFlow Wireless Headphones",
+      "price": 129.99,
+      "description": "Active noise-canceling headphones with 30-hour battery life.",
+      "count": 45,
+      "is_active": true,
+      "category": 2
+    },
+    {
+      "id": 4,
+      "name": "Ergo-Comfort Office Chair",
+      "price": 285.0,
+      "description": "Adjustable lumbar support and breathable mesh back.",
+      "count": 15,
+      "is_active": true,
+      "category": 2
+    },
+    {
+      "id": 5,
+      "name": "Ultra-Slim Laptop 14-inch",
+      "price": 950.0,
+      "description": "High-performance laptop for developers and students.",
+      "count": 10,
+      "is_active": true,
+      "category": 2
+    },
+    {
+      "id": 6,
+      "name": "Heritage Chronograph Gold Watch",
+      "price": 2450.0,
+      "description": "Hand-assembled Swiss movement with 18k gold casing.",
+      "count": 3,
+      "is_active": true,
+      "category": 3
+    },
+    {
+      "id": 7,
+      "name": "Designer Leather Handbag",
+      "price": 850.0,
+      "description": "Premium Italian leather with custom hardware.",
+      "count": 8,
+      "is_active": true,
+      "category": 3
+    },
+    {
+      "id": 8,
+      "name": "Guardian 5-Year Life Insurance",
+      "price": 75.0,
+      "description": "Basic life coverage including accidental benefits.",
+      "count": 1000,
+      "is_active": true,
+      "category": 4
+    },
+    {
+      "id": 9,
+      "name": "Emergency Fire Extinguisher",
+      "price": 45.0,
+      "description": "Multi-purpose dry chemical extinguisher for home use.",
+      "count": 60,
+      "is_active": true,
+      "category": 4
+    },
+    {
+      "id": 10,
+      "name": "Roadside Assistance Membership",
+      "price": 120.0,
+      "description": "Annual subscription for towing and flat tire support.",
+      "count": 200,
+      "is_active": true,
+      "category": 4
+    },
+    {
+      "id": 11,
+      "name": "test",
+      "price": 152.0,
+      "description": "tesr",
+      "count": 6,
+      "is_active": true,
+      "category": 1
+    },
+    {
+      "id": 12,
+      "name": "Item 1",
+      "price": 12.0,
+      "description": "Item 1 description",
+      "count": 100,
+      "is_active": true,
+      "category": 1
+    },
+    {
+      "id": 13,
+      "name": "Item 13",
+      "price": 16.0,
+      "description": "Item 13 description",
+      "count": 10,
+      "is_active": true,
+      "category": 2
+    },
+    {
+      "id": 14,
+      "name": "Smart Coffee Maker",
+      "price": 85.5,
+      "description": "WiFi-enabled coffee machine with scheduled brewing.",
+      "count": 25,
+      "is_active": true,
+      "category": 2
+    },
+    {
+      "id": 15,
+      "name": "FreshMint Toothpaste",
+      "price": 5.99,
+      "description": "Daily fluoride protection with cool mint flavor.",
+      "count": 500,
+      "is_active": true,
+      "category": 1
+    },
+    {
+      "id": 16,
+      "name": "Precision-Click Wireless Mouse",
+      "price": 45.99,
+      "description": "Ergonomic vertical design to reduce wrist strain during long coding sessions.",
+      "count": 85,
+      "is_active": true,
+      "category": 2
+    },
+    {
+      "id": 17,
+      "name": "Hydro-Tough Flask 1L",
+      "price": 24.0,
+      "description": "Double-walled vacuum insulation keeps drinks cold for 24 hours.",
+      "count": 150,
+      "is_active": true,
+      "category": 1
+    },
+    {
+      "id": 18,
+      "name": "ClickMaster Pro Keyboard",
+      "price": 115.0,
+      "description": "RGB backlit mechanical keyboard with tactile blue switches.",
+      "count": 30,
+      "is_active": true,
+      "category": 2
+    },
+    {
+      "id": 19,
+      "name": "Nomad Series Travel Pack",
+      "price": 120.0,
+      "description": "Water-resistant fabric with a dedicated 16-inch laptop compartment.",
+      "count": 40,
+      "is_active": true,
+      "category": 3
+    },
+    {
+      "id": 20,
+      "name": "Sentinel 360 Camera",
+      "price": 89.99,
+      "description": "1080p HD security camera with night vision and motion alerts.",
+      "count": 55,
+      "is_active": true,
+      "category": 4
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Convenience Goods"
+    },
+    {
+      "id": 2,
+      "name": "Shopping Goods"
+    },
+    {
+      "id": 3,
+      "name": "Specialty Goods"
+    },
+    {
+      "id": 4,
+      "name": "Unsought Goods"
+    },
+    {
+      "id": 5,
+      "name": "Unsought Goods"
+    }
+  ]
+}
