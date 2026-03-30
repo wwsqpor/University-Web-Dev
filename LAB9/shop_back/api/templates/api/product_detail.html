@@ -1,0 +1,24 @@
+{% extends 'api/layout.html' %}
+{% load static %}
+
+{% block title %}Product Details{% endblock %}
+
+{% block cssStyles %}
+    <link rel="stylesheet" href="{% static 'api/css/product_detail.css' %}">
+{% endblock %}
+
+{% block content %}
+    {% if product.is_active %}
+    <div class="product-card">
+        <div class="product-header">
+            <h2>{{ product.name }}</h2>
+            <span class="price">${{ product.price }}</span>
+        </div>
+        <p class="description">{{ product.description }}</p>
+        <div class="product-footer">
+            <span class="stock">In Stock: {{ product.count }}</span>
+            <a href="{% url 'product_list' %}" class="btn-redirect">Return to List</a>
+        </div>
+    </div>
+    {% endif %}
+{% endblock %}
