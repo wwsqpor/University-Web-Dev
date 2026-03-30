@@ -1,206 +1,354 @@
 {
-  "products": [
+  "info": {
+    "_postman_id": "9cad66b9-90c8-4f83-8563-57c80574b76c",
+    "name": "Online Shop API",
+    "description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53612274",
+    "_collection_link": "https://go.postman.co/collection/53612274-9cad66b9-90c8-4f83-8563-57c80574b76c?source=collection_link"
+  },
+  "item": [
     {
-      "id": 1,
-      "name": "FreshMint Toothpaste",
-      "price": 4.5,
-      "description": "Daily fluoride protection with cool mint flavor.",
-      "count": 500,
-      "is_active": true,
-      "category": 1
+      "name": "Categories",
+      "item": [
+        {
+          "name": "Get All Categories",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/categories/",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "categories",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Category by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/categories/1/",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "categories",
+                "1",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Products by Category",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/categories/1/products/",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "categories",
+                "1",
+                "products",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Category",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Good Goods\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/categories/",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "categories",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Category",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Good Goods\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/categories/1/",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "categories",
+                "1",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Category",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/categories/1/",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "categories",
+                "1",
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
     },
     {
-      "id": 2,
-      "name": "Organic Whole Milk",
-      "price": 3.2,
-      "description": "1 Liter of farm-fresh organic whole milk.",
-      "count": 120,
-      "is_active": true,
-      "category": 1
-    },
-    {
-      "id": 3,
-      "name": "SoundFlow Wireless Headphones",
-      "price": 129.99,
-      "description": "Active noise-canceling headphones with 30-hour battery life.",
-      "count": 45,
-      "is_active": true,
-      "category": 2
-    },
-    {
-      "id": 4,
-      "name": "Ergo-Comfort Office Chair",
-      "price": 285.0,
-      "description": "Adjustable lumbar support and breathable mesh back.",
-      "count": 15,
-      "is_active": true,
-      "category": 2
-    },
-    {
-      "id": 5,
-      "name": "Ultra-Slim Laptop 14-inch",
-      "price": 950.0,
-      "description": "High-performance laptop for developers and students.",
-      "count": 10,
-      "is_active": true,
-      "category": 2
-    },
-    {
-      "id": 6,
-      "name": "Heritage Chronograph Gold Watch",
-      "price": 2450.0,
-      "description": "Hand-assembled Swiss movement with 18k gold casing.",
-      "count": 3,
-      "is_active": true,
-      "category": 3
-    },
-    {
-      "id": 7,
-      "name": "Designer Leather Handbag",
-      "price": 850.0,
-      "description": "Premium Italian leather with custom hardware.",
-      "count": 8,
-      "is_active": true,
-      "category": 3
-    },
-    {
-      "id": 8,
-      "name": "Guardian 5-Year Life Insurance",
-      "price": 75.0,
-      "description": "Basic life coverage including accidental benefits.",
-      "count": 1000,
-      "is_active": true,
-      "category": 4
-    },
-    {
-      "id": 9,
-      "name": "Emergency Fire Extinguisher",
-      "price": 45.0,
-      "description": "Multi-purpose dry chemical extinguisher for home use.",
-      "count": 60,
-      "is_active": true,
-      "category": 4
-    },
-    {
-      "id": 10,
-      "name": "Roadside Assistance Membership",
-      "price": 120.0,
-      "description": "Annual subscription for towing and flat tire support.",
-      "count": 200,
-      "is_active": true,
-      "category": 4
-    },
-    {
-      "id": 11,
-      "name": "test",
-      "price": 152.0,
-      "description": "tesr",
-      "count": 6,
-      "is_active": true,
-      "category": 1
-    },
-    {
-      "id": 12,
-      "name": "Item 1",
-      "price": 12.0,
-      "description": "Item 1 description",
-      "count": 100,
-      "is_active": true,
-      "category": 1
-    },
-    {
-      "id": 13,
-      "name": "Item 13",
-      "price": 16.0,
-      "description": "Item 13 description",
-      "count": 10,
-      "is_active": true,
-      "category": 2
-    },
-    {
-      "id": 14,
-      "name": "Smart Coffee Maker",
-      "price": 85.5,
-      "description": "WiFi-enabled coffee machine with scheduled brewing.",
-      "count": 25,
-      "is_active": true,
-      "category": 2
-    },
-    {
-      "id": 15,
-      "name": "FreshMint Toothpaste",
-      "price": 5.99,
-      "description": "Daily fluoride protection with cool mint flavor.",
-      "count": 500,
-      "is_active": true,
-      "category": 1
-    },
-    {
-      "id": 16,
-      "name": "Precision-Click Wireless Mouse",
-      "price": 45.99,
-      "description": "Ergonomic vertical design to reduce wrist strain during long coding sessions.",
-      "count": 85,
-      "is_active": true,
-      "category": 2
-    },
-    {
-      "id": 17,
-      "name": "Hydro-Tough Flask 1L",
-      "price": 24.0,
-      "description": "Double-walled vacuum insulation keeps drinks cold for 24 hours.",
-      "count": 150,
-      "is_active": true,
-      "category": 1
-    },
-    {
-      "id": 18,
-      "name": "ClickMaster Pro Keyboard",
-      "price": 115.0,
-      "description": "RGB backlit mechanical keyboard with tactile blue switches.",
-      "count": 30,
-      "is_active": true,
-      "category": 2
-    },
-    {
-      "id": 19,
-      "name": "Nomad Series Travel Pack",
-      "price": 120.0,
-      "description": "Water-resistant fabric with a dedicated 16-inch laptop compartment.",
-      "count": 40,
-      "is_active": true,
-      "category": 3
-    },
-    {
-      "id": 20,
-      "name": "Sentinel 360 Camera",
-      "price": 89.99,
-      "description": "1080p HD security camera with night vision and motion alerts.",
-      "count": 55,
-      "is_active": true,
-      "category": 4
-    }
-  ],
-  "categories": [
-    {
-      "id": 1,
-      "name": "Convenience Goods"
-    },
-    {
-      "id": 2,
-      "name": "Shopping Goods"
-    },
-    {
-      "id": 3,
-      "name": "Specialty Goods"
-    },
-    {
-      "id": 4,
-      "name": "Unsought Goods"
-    },
-    {
-      "id": 5,
-      "name": "Unsought Goods"
+      "name": "Products",
+      "item": [
+        {
+          "name": "Get All Products",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/products/",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "products",
+                ""
+              ]
+            },
+            "description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+          },
+          "response": []
+        },
+        {
+          "name": "Get Product by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/products/1/",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "products",
+                "1",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Product",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Successful POST request\", function () {",
+                  "    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+                  "});",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Nomad Series Travel Pack\",\n    \"price\": 120.0,\n    \"description\": \"Water-resistant fabric with a dedicated 16-inch laptop compartment.\",\n    \"count\": 40,\n    \"is_active\": true,\n    \"category\": 3\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/products/",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "products",
+                ""
+              ]
+            },
+            "description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+          },
+          "response": []
+        },
+        {
+          "name": "Update Product",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/products/3/",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "products",
+                "3",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Product",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/products/1/",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "products",
+                "1",
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
     }
   ]
 }
