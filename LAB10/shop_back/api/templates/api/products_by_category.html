@@ -1,0 +1,27 @@
+{% extends 'api/layout.html' %}
+{% load static %}
+
+{% block title %}Products List{% endblock %}
+
+{% block cssStyles %}
+    <link rel="stylesheet" href="{% static 'api/css/style.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="product-container">
+        <h1>Products in {{ category.name }}</h1> {% for product in products %}
+            {% if product.is_active %}
+            <div class="product-card">
+                <h2>{{ product.name }}</h2>
+                <span class="price">${{ product.price }}</span>
+                <p>{{ product.description }}</p>
+                <div class="product-footer">
+                    <a href="{% url 'product_detail' product.pk %}" class="btn-redirect">View Details</a>
+                </div>
+            </div>
+            {% endif %}
+        {% empty %}
+            <p>No products found in this category.</p>
+        {% endfor %}
+    </div>
+{% endblock %}

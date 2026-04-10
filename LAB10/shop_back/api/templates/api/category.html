@@ -1,0 +1,23 @@
+{% extends 'api/layout.html' %}
+{% load static %}
+
+{% block title %}{{ category.name }}{% endblock %}
+
+{% block cssStyles %}
+    <link rel="stylesheet" href="{% static 'api/css/category.css' %}">
+{% endblock %}
+
+{% block content %}
+    <header class="category-header">
+        <h1 class="category-title">{{ category.name }}</h1>
+    </header>
+
+    <nav class="bottom-nav">
+        <a href="{% url 'categories_list' %}" class="btn-redirect">
+            &larr; Return to Categories
+        </a>
+        <a href="{% url 'products_by_category' category.pk %}" class="btn-redirect">
+            View Details &rarr;
+        </a>
+    </nav>
+{% endblock %}

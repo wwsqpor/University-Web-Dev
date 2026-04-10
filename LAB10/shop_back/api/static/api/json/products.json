@@ -1,0 +1,142 @@
+[
+  {
+    "model": "api.category",
+    "pk": 1,
+    "fields": { "name": "Convenience Goods" }
+  },
+  {
+    "model": "api.category",
+    "pk": 2,
+    "fields": { "name": "Shopping Goods" }
+  },
+  {
+    "model": "api.category",
+    "pk": 3,
+    "fields": { "name": "Specialty Goods" }
+  },
+  {
+    "model": "api.category",
+    "pk": 4,
+    "fields": { "name": "Unsought Goods" }
+  },
+  {
+    "model": "api.product",
+    "pk": 1,
+    "fields": {
+      "name": "FreshMint Toothpaste",
+      "price": 4.50,
+      "description": "Daily fluoride protection with cool mint flavor.",
+      "count": 500,
+      "is_active": true,
+      "category": 1
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 2,
+    "fields": {
+      "name": "Organic Whole Milk",
+      "price": 3.20,
+      "description": "1 Liter of farm-fresh organic whole milk.",
+      "count": 120,
+      "is_active": true,
+      "category": 1
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 3,
+    "fields": {
+      "name": "SoundFlow Wireless Headphones",
+      "price": 129.99,
+      "description": "Active noise-canceling headphones with 30-hour battery life.",
+      "count": 45,
+      "is_active": true,
+      "category": 2
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 4,
+    "fields": {
+      "name": "Ergo-Comfort Office Chair",
+      "price": 285.00,
+      "description": "Adjustable lumbar support and breathable mesh back.",
+      "count": 15,
+      "is_active": true,
+      "category": 2
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 5,
+    "fields": {
+      "name": "Ultra-Slim Laptop 14-inch",
+      "price": 950.00,
+      "description": "High-performance laptop for developers and students.",
+      "count": 10,
+      "is_active": true,
+      "category": 2
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 6,
+    "fields": {
+      "name": "Heritage Chronograph Gold Watch",
+      "price": 2450.00,
+      "description": "Hand-assembled Swiss movement with 18k gold casing.",
+      "count": 3,
+      "is_active": true,
+      "category": 3
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 7,
+    "fields": {
+      "name": "Designer Leather Handbag",
+      "price": 850.00,
+      "description": "Premium Italian leather with custom hardware.",
+      "count": 8,
+      "is_active": true,
+      "category": 3
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 8,
+    "fields": {
+      "name": "Guardian 5-Year Life Insurance",
+      "price": 75.00,
+      "description": "Basic life coverage including accidental benefits.",
+      "count": 1000,
+      "is_active": true,
+      "category": 4
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 9,
+    "fields": {
+      "name": "Emergency Fire Extinguisher",
+      "price": 45.00,
+      "description": "Multi-purpose dry chemical extinguisher for home use.",
+      "count": 60,
+      "is_active": true,
+      "category": 4
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 10,
+    "fields": {
+      "name": "Roadside Assistance Membership",
+      "price": 120.00,
+      "description": "Annual subscription for towing and flat tire support.",
+      "count": 200,
+      "is_active": true,
+      "category": 4
+    }
+  }
+]

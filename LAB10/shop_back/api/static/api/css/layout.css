@@ -1,0 +1,47 @@
+/* 1. Prevent content from being hidden behind the footer */
+.main-wrapper {
+    padding-bottom: 100px; /* Give enough space so the footer doesn't overlap text */
+}
+
+/* 2. Fix the footer to the bottom of the viewport */
+.sticky-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent */
+    backdrop-filter: blur(10px); /* Modern blur effect */
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    z-index: 1000; /* Ensures it stays on top of cards */
+}
+
+/* 3. Button Styles (No layout impact) */
+.nav-btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.primary {
+    background-color: #2d3436;
+    color: white;
+}
+
+.secondary {
+    background-color: white;
+    color: #2d3436;
+    border: 1px solid #2d3436;
+}
+
+.nav-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
