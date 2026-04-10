@@ -1,11 +1,8 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from .views import CategoryViewSet, ProductViewSet
-
-router = DefaultRouter()
-router.register(r'categories', CategoryViewSet)
-router.register(r'products', ProductViewSet)
+from .views import fbv
 
 urlpatterns = [
-    path('', include(router.urls)),
+    path('products_list/', fbv.products_list),
+    path('products_list/<int:pk>/', fbv.product_detail)
 ]
